@@ -1,0 +1,114 @@
+/* ===== GLOBAL VALORANT NEON THEME ===== */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #111122, #0d0d0d);
+    background-size: 300% 300%;
+    animation: bgMove 12s infinite alternate;
+    color: white;
+    margin: 0;
+    padding: 20px;
+  }
+
+  @keyframes bgMove {
+    from { background-position: 0% 0%; }
+    to   { background-position: 100% 100%; }
+  }
+
+  h1 {
+    color: #ff4655;
+    text-shadow: 0 0 15px #ff4655;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+    text-align: center;
+  }
+
+  /* ===== VALORANT CATEGORY BUTTONS ===== */
+  h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 25px 0;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+  }
+
+  h3:hover {
+    transform: scale(1.25);
+    color: #ff4655;
+    border-color: #ff4655;
+    text-shadow: 0 0 15px #ff4655;
+    box-shadow: 0 0 20px #ff4655;
+  }
+
+  /* ===== SEARCH BAR ===== */
+  #searchBar {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    width: 350px;
+    padding: 12px;
+
+    background: #0d0d0d;
+    color: #00eaff;
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00eaff;
+  }
+
+  #searchBar:focus {
+    transform: scale(1.10);
+    border-color: #ff4655;
+    color: #ff4655;
+
+    box-shadow: 0 0 20px #ff4655;
+  }
+
+  /* ===== SEARCH SUGGESTIONS ===== */
+  #suggestions {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 2px;
+
+    background: #111;
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+
+    display: none;
+    color: white;
+    position: relative;
+
+    box-shadow: 0 0 15px #00eaff;
+  }
+
+  .suggestion {
+    padding: 12px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+  }
+
+  .suggestion:hover {
+    background: #222;
+    color: #ff4655;
+    text-shadow: 0 0 10px #ff4655;
+    transform: scale(1.05);
+  }
