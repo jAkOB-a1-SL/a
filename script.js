@@ -4,7 +4,7 @@
     { name: "YouTube", url: "https://youtube.com" },
     { name: "Wikipedia", url: "https://wikipedia.org" },
     { name: "OpenAI", url: "https://openai.com" },
-    { name: "GitHub", url: "https://github.com" }
+    { name: "GitHub", url: "https://github.com" },
     { name: "Index2", url: "index2.html"}
   ];
 
