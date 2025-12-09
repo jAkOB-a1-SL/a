@@ -41,7 +41,7 @@
     border-radius: 10px;
 
     transition: 0.25s ease;
-    color:white
+    font-color:white
   }
 
   h3:hover {
