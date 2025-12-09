@@ -145,46 +145,12 @@ th {
   <tr><td>Team Deathmatch</td></tr>
   <tr><td>Skirmish</td></tr>
   <tr><td>Practice Range</td></tr>
+  <tr><th>Not Available Gamemodes</th></tr>
+    <tr><td>Replication</td></tr>
+    <tr><td>Snowball Fight</td></tr>
 </table>
 
-<script>
-/* ===== SEARCH DATA ===== */
-const pages = [
-  { name: "Agents", url: "agents.html" },
-  { name: "Maps", url: "maps.html" },
-  { name: "Weapons", url: "weapons.html" },
-  { name: "Patches", url: "patches.html" },
-  { name: "E-Sports", url: "esports.html" },
-  { name: "Google", url: "https://google.com" }
-];
 
-function showSuggestions() {
-  const input = document.getElementById("searchBar").value.toLowerCase();
-  const box = document.getElementById("suggestions");
-
-  if (input === "") {
-    box.style.display = "none";
-    return;
-  }
-
-  const matches = pages.filter(p => p.name.toLowerCase().includes(input));
-
-  box.innerHTML = "";
-  matches.forEach(match => {
-    const div = document.createElement("div");
-    div.classList.add("suggestion");
-    div.textContent = match.name;
-
-    div.onclick = () => {
-      window.location.href = match.url;
-    };
-
-    box.appendChild(div);
-  });
-
-  box.style.display = matches.length > 0 ? "block" : "none";
-}
-</script>
 
 </body>
 </html>
