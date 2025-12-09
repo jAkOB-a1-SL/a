@@ -5,7 +5,7 @@
     { name: "Wikipedia", url: "https://wikipedia.org" },
     { name: "OpenAI", url: "https://openai.com" },
     { name: "GitHub", url: "https://github.com" },
-    { name: "Gamemodes", url: "indexGamemodes.html"}
+    { name: "Gamemodes", url: "https://jakob-a1-sl.github.io/a/indexGamemodes.html"}
   ];
 
   function showSuggestions() {
