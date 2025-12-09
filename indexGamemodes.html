@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Valorant Maps – Neon Theme</title>
+
+<style>
+
+/* ===== BACKGROUND ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #020202, #111122, #0d0d0d);
+  background-size: 300% 300%;
+  animation: bgMove 10s infinite alternate;
+  color: white;
+  font-style: italic;
+  margin: 0;
+  padding: 20px;
+}
+
+@keyframes bgMove {
+  from { background-position: 0% 0%; }
+  to   { background-position: 100% 100%; }
+}
+
+/* ===== TITLES ===== */
+h1 {
+  color: #ff4655;
+  text-shadow: 0 0 20px #ff4655;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ===== NEON SEARCHBAR ===== */
+#searchBar {
+  width: 320px;
+  padding: 12px;
+  border: 2px solid #00eaff;
+  border-radius: 8px;
+  font-size: 18px;
+  outline: none;
+  background: #0a0a0a;
+  color: white;
+  box-shadow: 0 0 12px #00eaff;
+  display: block;
+  margin: 10px auto 0 auto;
+  transition: 0.2s;
+}
+
+#searchBar:focus {
+  border-color: #ff4655;
+  box-shadow: 0 0 20px #ff4655;
+}
+
+/* AUTOCOMPLETE LIST */
+#suggestions {
+  width: 320px;
+  background: #0a0a0a;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2px;
+  display: none;
+  color: white;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.suggestion {
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.suggestion:hover {
+  background: #111;
+  color: #ff4655;
+  text-shadow: 0 0 8px #ff4655;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-size: 22px;
+  color: #e6e6e6;
+  text-align: center;
+  box-shadow: 0 0 20px #00eaff;
+}
+
+td, th {
+  padding: 15px;
+  border: 2px solid #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+  transition: 0.2s ease;
+}
+
+td:hover {
+  background: #111;
+  color: #ff4655;
+  transform: scale(1.1);
+  border-color: #ff4655;
+  text-shadow: 0 0 10px #ff4655;
+}
+
+th {
+  background: #0a0a0a;
+  font-size: 26px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Better Valorant Wiki</h1>
+
+<!-- SEARCH BAR -->
+<h2>🔎 Search for something</h2>
+<input type="text" id="searchBar" placeholder="Search..." onkeyup="showSuggestions()">
+<div id="suggestions"></div>
+
+<h2>Maps</h2>
+
+<p style="text-align:center; font-size:22px; color:#cccccc;">There are 19 different Maps</p>
+
+<table>
+  <tr><th>Available Gamemodes</th></tr>
+  <tr><td>Unrated</td></tr>
+  <tr><td>Competitive</td></tr>
+  <tr><td>Swiftplay</td></tr>
+  <tr><td>Spike Rush</td></tr>
+  <tr><td>Deathmatch</td></tr>
+  <tr><td>Escalation</td></tr>
+  <tr><td>Premier</td></tr>
+  <tr><td>Team Deathmatch</td></tr>
+  <tr><td>Skirmish</td></tr>
+  <tr><td>Practice Range</td></tr>
+</table>
+
+<script>
+/* ===== SEARCH DATA ===== */
+const pages = [
+  { name: "Agents", url: "agents.html" },
+  { name: "Maps", url: "maps.html" },
+  { name: "Weapons", url: "weapons.html" },
+  { name: "Patches", url: "patches.html" },
+  { name: "E-Sports", url: "esports.html" },
+  { name: "Google", url: "https://google.com" }
+];
+
+function showSuggestions() {
+  const input = document.getElementById("searchBar").value.toLowerCase();
+  const box = document.getElementById("suggestions");
+
+  if (input === "") {
+    box.style.display = "none";
+    return;
+  }
+
+  const matches = pages.filter(p => p.name.toLowerCase().includes(input));
+
+  box.innerHTML = "";
+  matches.forEach(match => {
+    const div = document.createElement("div");
+    div.classList.add("suggestion");
+    div.textContent = match.name;
+
+    div.onclick = () => {
+      window.location.href = match.url;
+    };
+
+    box.appendChild(div);
+  });
+
+  box.style.display = matches.length > 0 ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
