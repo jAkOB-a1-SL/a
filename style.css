@@ -113,3 +113,12 @@
     text-shadow: 0 0 10px #ff4655;
     transform: scale(1.05);
   }
+  .gamemodes-table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-size: 22px;
+  color: #e6e6e6;
+  text-align: center;
+  box-shadow: 0 0 20px #00eaff;
+  }
