@@ -2,22 +2,94 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Valorant Maps – Neon Theme</title>
 
+<style>
+
+/* ===== BACKGROUND ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #020202, #111122, #0d0d0d);
+  background-size: 300% 300%;
+  animation: bgMove 10s infinite alternate;
+  color: white;
+  font-style: italic;
+  margin: 0;
+  padding: 20px;
+}
+
+@keyframes bgMove {
+  from { background-position: 0% 0%; }
+  to   { background-position: 100% 100%; }
+}
+
+/* ===== TITLES ===== */
+h1 {
+  color: #ff4655;
+  text-shadow: 0 0 20px #ff4655;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+  color: #cccccc;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-size: 22px;
+  color: #e6e6e6;
+  text-align: center;
+  box-shadow: 0 0 20px #00eaff;
+}
+
+td, th {
+  padding: 15px;
+  border: 2px solid #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+  transition: 0.2s ease;
+}
+
+td:hover {
+  background: #111;
+  color: #ff4655;
+  transform: scale(1.1);
+  border-color: #ff4655;
+  text-shadow: 0 0 10px #ff4655;
+}
+
+th {
+  background: #0a0a0a;
+  font-size: 26px;
+}
+
+</style>
 </head>
 
 <body>
 
 <h1>Better Valorant Wiki</h1>
+<h2>Maps</h2>
 
-<!-- SEARCH BAR -->
-<h2>🔎 Search for something</h2>
-<input type="text" id="searchBar" placeholder="Search..." onkeyup="showSuggestions()">
-<div id="suggestions"></div>
 
-<!-- GAMEMODES TABLE -->
 
-<table class="gamemodes-table">
-  <tr><th>Available Gamemodes</th></tr>
+<table>
+  <tr>
+    <th>Available Gamemodes</th>
+  </tr>
   <tr><td>Unrated</td></tr>
   <tr><td>Competitive</td></tr>
   <tr><td>Swiftplay</td></tr>
@@ -32,8 +104,6 @@
     <tr><td>Replication</td></tr>
     <tr><td>Snowball Fight</td></tr>
 </table>
-
-
 
 </body>
 </html>
