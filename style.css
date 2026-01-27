@@ -1,119 +1,137 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ===== GLOBAL VALORANT NEON THEME ===== */
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0a0a0a, #111122, #0d0d0d);
-    background-size: 300% 300%;
-    animation: bgMove 12s infinite alternate;
-    color: white;
-    margin: 0;
-    padding: 20px;
-  }
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #111122, #0d0d0d);
+  background-size: 300% 300%;
+  animation: bgMove 12s infinite alternate;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-  @keyframes bgMove {
-    from { background-position: 0% 0%; }
-    to   { background-position: 100% 100%; }
-  }
+@keyframes bgMove {
+  from { background-position: 0% 0%; }
+  to   { background-position: 100% 100%; }
+}
 
-  h1 {
-    color: #ff4655;
-    text-shadow: 0 0 15px #ff4655;
-    text-align: center;
-    font-size: 45px;
-    margin-top: 40px;
-  }
+/* ===== TITLES ===== */
+h1 {
+  color: #ff4655;
+  text-shadow: 0 0 15px #ff4655;
+  font-size: 45px;
+  margin-top: 40px;
+}
 
-  h2 {
-    color: #00eaff;
-    text-shadow: 0 0 10px #00eaff;
-    text-align: center;
-  }
+h2 {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+  margin-top: 15px;
+}
 
-  /* ===== VALORANT CATEGORY BUTTONS ===== */
-  h3 {
-    text-align: center;
-    font-size: 30px;
-    margin: 25px 0;
-    padding: 10px 25px;
-    display: inline-block;
-    cursor: pointer;
+/* ===== SEARCH BAR ===== */
+#searchBar {
+  display: block;
+  margin: 25px auto 5px;
 
-    border: 2px solid #00eaff;
-    border-radius: 10px;
+  width: 350px;
+  padding: 12px;
 
-    transition: 0.25s ease;
-   color:white;
-  }
+  background: #0d0d0d;
+  color: #00eaff;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
 
-  h3:hover {
-    transform: scale(1.25);
-    color: #ff4655;
-    border-color: #ff4655;
-    text-shadow: 0 0 15px #ff4655;
-    box-shadow: 0 0 20px #ff4655;
-  }
+  font-size: 18px;
+  outline: none;
+  text-align: center;
 
-  /* ===== SEARCH BAR ===== */
-  #searchBar {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
+  box-shadow: 0 0 10px #00eaff;
+  transition: 0.25s ease;
+}
 
-    width: 350px;
-    padding: 12px;
+#searchBar:focus {
+  transform: scale(1.05);
+  border-color: #ff4655;
+  color: #ff4655;
+  box-shadow: 0 0 20px #ff4655;
+}
 
-    background: #0d0d0d;
-    color: #00eaff;
-    border: 2px solid #00eaff;
-    border-radius: 10px;
+/* ===== SEARCH SUGGESTIONS ===== */
+#suggestions {
+  width: 350px;
+  margin: 0 auto;
 
-    font-size: 18px;
-    outline: none;
-    text-align: center;
+  background: #111;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
 
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px #00eaff;
-  }
+  display: none;
+  position: relative;
 
-  #searchBar:focus {
-    transform: scale(1.10);
-    border-color: #ff4655;
-    color: #ff4655;
+  box-shadow: 0 0 15px #00eaff;
+}
 
-    box-shadow: 0 0 20px #ff4655;
-  }
+.suggestion {
+  padding: 12px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-  /* ===== SEARCH SUGGESTIONS ===== */
-  #suggestions {
-    width: 350px;
-    margin: 0 auto;
-    margin-top: 2px;
+.suggestion:hover {
+  background: #222;
+  color: #ff4655;
+  text-shadow: 0 0 10px #ff4655;
+}
 
-    background: #111;
-    border: 2px solid #00eaff;
-    border-radius: 10px;
+/* ===== BUTTON CONTAINER ===== */
+.button-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
 
-    display: none;
-    color: white;
-    position: relative;
+/* ===== VALORANT BUTTONS ===== */
+button,
+.button {
+  width: 230px;
+  height: 55px;
 
-    box-shadow: 0 0 15px #00eaff;
-  }
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 
-  .suggestion {
-    padding: 12px;
-    border-bottom: 1px solid #222;
-    cursor: pointer;
+  border: 2px solid #00eaff;
+  border-radius: 12px;
 
-    transition: 0.2s ease;
-  }
+  cursor: pointer;
+  text-decoration: none;
 
-  .suggestion:hover {
-    background: #222;
-    color: #ff4655;
-    text-shadow: 0 0 10px #ff4655;
-    transform: scale(1.05);
-  }
-  .gamemodes-table {
+  box-shadow: 0 0 12px rgba(0, 234, 255, 0.5);
+  transition: all 0.25s ease;
+}
+
+button:hover,
+.button:hover {
+  transform: scale(1.08);
+  color: #ff4655;
+  border-color: #ff4655;
+  box-shadow: 0 0 25px rgba(255, 70, 85, 0.9);
+}
+
+/* ===== TABLES (Gamemodes etc.) ===== */
+.gamemodes-table {
   width: 80%;
   margin: 40px auto;
   border-collapse: collapse;
@@ -121,24 +139,6 @@
   color: #e6e6e6;
   text-align: center;
   box-shadow: 0 0 20px #00eaff;
-  }
-
-  .button {
-  display: inline-flex;          /* WICHTIG */
-  justify-content: center;
-  align-items: center;
-
-  width: 220px;
-  height: 55px;
-
-  text-decoration: none;         /* gegen blau/underline */
-  color: white;
-  font-weight: bold;
-
-  border: 2px solid cyan;
-  border-radius: 10px;
-
-  box-sizing: border-box;
 }
 
 
