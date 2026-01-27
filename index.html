@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Better Valorant Wiki</title>
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Better Valorant Wiki</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<!-- SEARCH BAR -->
-<h2>🔎 Search for something</h2>
-<input type="text" id="searchBar" placeholder="Search..." onkeyup="showSuggestions()">
-<div id="suggestions"></div>
+  <!-- SEARCH BAR -->
+  <h2>🔎 Search for something</h2>
+  <input type="text" id="searchBar" placeholder="Search..." onkeyup="showSuggestions()">
+  <div id="suggestions"></div>
 
-<!-- MAIN TITLE -->
-<h1>Better Valorant Wiki</h1>
-<h2>What do you want to know about?</h2>
+  <!-- MAIN TITLE -->
+  <h1>Better Valorant Wiki</h1>
+  <h2>What do you want to know about?</h2>
 
-<!-- CATEGORY BUTTONS -->
-<div style="text-align:center;">
-  <h3></h3><a href="indexAgents.html">Agents</h3></a><br>
-  <h3></h3><a href="indexMaps.html">Maps</h3></a><br>
-  <h3></h3><a href="indexPatches.html">Patches</h3></a><br>
-  <h3>Weapons</h3><br>
-  <h3><a href="indexEsports.html"></a>E-Sports</h3><br>
-  <h3></h3><a href="indexGamemodes.html">Gamemodes</h3></a><br>
-</div>
+  <!-- CATEGORY BUTTONS -->
+  <div class="button-container">
+
+    <button onclick="location.href='indexAgents.html'">Agents</button>
+    <button onclick="location.href='indexMaps.html'">Maps</button>
+    <button onclick="location.href='indexPatches.html'">Patches</button>
+    <button onclick="location.href='indexWeapons.html'">Weapons</button>
+    <button onclick="location.href='indexEsports.html'">E-Sports</button>
+    <button onclick="location.href='indexGamemodes.html'">Gamemodes</button>
+
+  </div>
+
 </body>
 </html>
 

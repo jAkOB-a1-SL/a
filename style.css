@@ -123,3 +123,22 @@
   box-shadow: 0 0 20px #00eaff;
   }
 
+  .button {
+  display: inline-flex;          /* WICHTIG */
+  justify-content: center;
+  align-items: center;
+
+  width: 220px;
+  height: 55px;
+
+  text-decoration: none;         /* gegen blau/underline */
+  color: white;
+  font-weight: bold;
+
+  border: 2px solid cyan;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+
